@@ -1,0 +1,47 @@
+
+html {
+  font-family: sans-serif;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid rgb(200,200,200);
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+td, th {
+  border: 1px solid rgb(190,190,190);
+  padding: 10px 20px;
+  height: 28px;
+  width: 19px;
+}
+
+th {
+  background-color: rgb(235,235,235);
+}
+
+td {
+  text-align: center;
+  font-weight: bolder;
+  color: rgb(184, 84, 84);
+}
+
+.h {
+  color: rgb(59, 59, 172);
+}
+
+#reset {
+  padding: 5px 15px;
+  margin: 12px;
+  border-radius: 6px;
+  border: none;
+  font-weight: normal;
+  color: rgb(255, 255, 255);
+  background-color: rgb(118, 185, 144);
+}
