@@ -44,7 +44,7 @@
   })
 
   var checkRows = function(game) {
-    for (var r = 0; r < 2; r++) {
+    for (var r = 0; r < 3; r++) {
       if (game[r][0] === game[r][1] && game[r][1] === game[r][2]) {
         return true;
       }
@@ -90,110 +90,180 @@
     }
   }
 
-
+  var checkTie = function(game) {
+    var full = true;
+    for (var r = 0; r < 3; r++) {
+      for (var c = 0; c < 3; c++) {
+        if (typeof game[r][c] === 'number') {
+          full = false;
+        }
+      }
+    }
+    return full;
+  }
 
 
   var displayWinners = function() {
-    xwins.appendChild(document.createTextNode(`X Wins: ${xWins}`));
-    owins.appendChild(document.createTextNode(`O Wins: ${oWins}`));
+    if (xwin.firstChild) {
+      xwin.removeChild(xwin.firstChild)
+    }
+    if (owin.firstChild) {
+      owin.removeChild(owin.firstChild)
+    }
+    xwin.appendChild(document.createTextNode(`X Wins: ${xWins}`));
+    owin.appendChild(document.createTextNode(`O Wins: ${oWins}`));
   }
 
   pos00.addEventListener("click", (event) => {
+    if (pos00.firstChild) {
+      return
+    }
     pos00.appendChild(document.createTextNode(currentTurn));
     board[0][0] = currentTurn;
     if (checkBoard(board) === true) {
       switchTurns = !switchTurns;
       setTimeout(() => {
         alert(`${currentTurn} WINS!!`)
+        displayWinners();
       }, 20)
+    } else if (checkTie(board)) {
+      alert(`TIE GAME! Please Click Reset`)
     }
   })
 
   pos01.addEventListener("click", (event) => {
+    if (pos01.firstChild) {
+      return
+    }
     pos01.appendChild(document.createTextNode(currentTurn));
     board[0][1] = currentTurn;
     if (checkBoard(board)) {
       switchTurns = !switchTurns;
       setTimeout(() => {
         alert(`${currentTurn} WINS!!`)
+        displayWinners();
       }, 20)
+    } else if (checkTie(board)) {
+      alert(`TIE GAME! Please Click Reset`)
     }
   })
 
   pos02.addEventListener("click", (event) => {
+    if (pos02.firstChild) {
+      return
+    }
     pos02.appendChild(document.createTextNode(currentTurn));
     board[0][2] = currentTurn;
     if (checkBoard(board)) {
       switchTurns = !switchTurns;
       setTimeout(() => {
         alert(`${currentTurn} WINS!!`)
+        displayWinners();
       }, 20)
+    } else if (checkTie(board)) {
+      alert(`TIE GAME! Please Click Reset`)
     }
   })
 
   pos10.addEventListener("click", (event) => {
+    if (pos10.firstChild) {
+      return
+    }
     pos10.appendChild(document.createTextNode(currentTurn));
     board[1][0] = currentTurn;
     if (checkBoard(board)) {
       switchTurns = !switchTurns;
       setTimeout(() => {
         alert(`${currentTurn} WINS!!`)
+        displayWinners();
       }, 20)
+    } else if (checkTie(board)) {
+      alert(`TIE GAME! Please Click Reset`)
     }
   })
 
   pos11.addEventListener("click", (event) => {
+    if (pos11.firstChild) {
+      return
+    }
     pos11.appendChild(document.createTextNode(currentTurn));
     board[1][1] = currentTurn;
     if (checkBoard(board)) {
       switchTurns = !switchTurns;
       setTimeout(() => {
         alert(`${currentTurn} WINS!!`)
+        displayWinners();
       }, 20)
+    } else if (checkTie(board)) {
+      alert(`TIE GAME! Please Click Reset`)
     }
   })
 
   pos12.addEventListener("click", (event) => {
+    if (pos12.firstChild) {
+      return
+    }
     pos12.appendChild(document.createTextNode(currentTurn));
     board[1][2] = currentTurn;
     if (checkBoard(board)) {
       switchTurns = !switchTurns;
       setTimeout(() => {
         alert(`${currentTurn} WINS!!`)
+        displayWinners();
       }, 20)
+    } else if (checkTie(board)) {
+      alert(`TIE GAME! Please Click Reset`)
     }
   })
 
   pos20.addEventListener("click", (event) => {
+    if (pos20.firstChild) {
+      return
+    }
     pos20.appendChild(document.createTextNode(currentTurn));
     board[2][0] = currentTurn;
     if (checkBoard(board)) {
       switchTurns = !switchTurns;
       setTimeout(() => {
         alert(`${currentTurn} WINS!!`)
+        displayWinners();
       }, 20)
+    } else if (checkTie(board)) {
+      alert(`TIE GAME! Please Click Reset`)
     }
   })
 
   pos21.addEventListener("click", (event) => {
+    if (pos21.firstChild) {
+      return
+    }
     pos21.appendChild(document.createTextNode(currentTurn));
     board[2][1] = currentTurn;
     if (checkBoard(board)) {
       switchTurns = !switchTurns;
       setTimeout(() => {
         alert(`${currentTurn} WINS!!`)
+        displayWinners();
       }, 20)
+    } else if (checkTie(board)) {
+      alert(`TIE GAME! Please Click Reset`)
     }
   })
 
   pos22.addEventListener("click", (event) => {
+    if (pos22.firstChild) {
+      return
+    }
     pos22.appendChild(document.createTextNode(currentTurn));
     board[2][2] = currentTurn;
     if (checkBoard(board)) {
       switchTurns = !switchTurns;
       setTimeout(() => {
         alert(`${currentTurn} WINS!!`)
+        displayWinners();
       }, 20)
+    } else if (checkTie(board)) {
+      alert(`TIE GAME! Please Click Reset`)
     }
   })
 

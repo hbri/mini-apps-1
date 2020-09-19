@@ -29,7 +29,7 @@ th {
 td {
   text-align: center;
   font-weight: bolder;
-  color: rgb(184, 84, 84);
+  color: rgb(73, 52, 52);
 }
 
 .h {
@@ -44,4 +44,14 @@ td {
   font-weight: normal;
   color: rgb(255, 255, 255);
   background-color: rgb(118, 185, 144);
+}
+
+#xwin {
+  color: rgb(196, 114, 76);
+
+}
+
+#owin {
+  color: rgb(82, 168, 96);
+
 }
